@@ -1,5 +1,6 @@
 <%= form_for(@idea, :html => { :multipart => true }) do |f| %>
   <%= f.file_field :picture %>
+  <% unless @idea.errors.empty? %>
     <div id="error_explanation">
       <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
 
@@ -12,15 +13,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, id: "name_1" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description, id: "idea_description1" %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br />
+    <%= f.label :picture, id: "idea_picture1" %><br />
     <%= f.text_field :picture %>
   </div>
   <div class="actions">

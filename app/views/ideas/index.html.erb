@@ -1,10 +1,10 @@
-<h1>Listing ideas</h1>
+<h1 id='listing_ideas'>Listing ideas</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Picture</th>
+    <th id='name123'>Name</th>
+    <th id='desc'>Description</th>
+    <th id='pic'>Picture</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,16 +12,16 @@
 
 <% @ideas.each do |idea| %>
   <tr>
-    <td><%= idea.name %></td>
-    <td><%= idea.description %></td>
-    <td><%= idea.picture %></td>
-    <td><%= link_to 'Show', idea %></td>
-    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-    <td><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></td>
+    <td id='idea_name123'><%= idea.name %></td>
+    <td id='idea_desc123'><%= idea.description %></td>
+    <td id='idea_pic123'><%= idea.picture %></td>
+    <td id='show'><%= link_to 'Show', idea %></td>
+    <td id='edit'><%= link_to 'Edit', edit_idea_path(idea) %></td>
+    <td id='destroy'><%= link_to 'Destroy', idea, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'New Idea', new_idea_path, id: 'new_idea123' %>
